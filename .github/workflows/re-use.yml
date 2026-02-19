@@ -71,3 +71,10 @@ jobs:
     uses: ./.github/workflows/resusable.yml
     with:
       artifact-name: dist-files
+  print-result:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Deployment Result
+        run: |
+          echo "Deployment Result: ${{ needs.deploy.outputs.result }}"

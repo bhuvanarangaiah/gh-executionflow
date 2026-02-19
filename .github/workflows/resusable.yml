@@ -16,6 +16,6 @@ jobs:
         with:
           name: ${{ inputs.artifact-name }}
       - name: List Artifacts
-        run: ls -la ${{ inputs.artifact-name }}
+        run: ls
       - name: Output Information
         run: echo "Deploying and Uploading Artifacts.."
